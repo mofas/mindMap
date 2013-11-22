@@ -1,0 +1,36 @@
+<!doctype html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+</head>
+  <body ng-app="mindMapApp">
+    
+
+    <div ng-controller="MainCtrl">
+      <div ng-repeat="i in awesomeThings">{{i}}</div>
+    </div>
+
+
+  <!-- build:js scripts/modules.js -->  
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="scripts/d3.v3.min.js"></script>
+  <script src="scripts/d3.layout.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>  
+  <!-- endbuild -->
+
+</body>
+</html>

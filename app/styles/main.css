@@ -1,0 +1,26 @@
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+pre {
+  font-size: 18px;
+}
+line {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+.node {
+  font: 10px sans-serif;
+}
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
