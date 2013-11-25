@@ -4,10 +4,62 @@ var module = angular.module('controller', []);
 
 module.controller('MainCtrl', [ '$scope' , function ($scope) {
 
+	$scope.root = null;		
+	$scope.fileName = "mindMap";
+
 	d3.json("data/data.json", function(json) {			  	
 	  $scope.json = json;
 	  $scope.$apply();
 	});
+
+	function serializeData(source){
+		var json = {};		
+		json.name = source.name;
+		var children = source.children || source._children;
+		var childList = [];
+		if(children){			
+			children.forEach(function(node){				
+				childList.push(serializeData(node));
+			});
+			json.children = childList;
+		}				
+		return json;
+	}
+
+
+	$scope.new = function(){
+		$scope.json =
+			{
+	  		"name" : "root"
+	  	};		
+	}
+
+	$scope.load = function(file){		
+		var reader = new FileReader();
+		reader.onload = function(event){
+    	var contents = event.target.result;
+    	//console.log(JSON.parse(contents));
+    	$scope.json = JSON.parse(contents);    	
+    	$scope.$apply();
+		}		
+		reader.readAsText(file);
+	}
+
+	$scope.save = function(){		
+		var saveData = serializeData($scope.root);
+		// window.open("data:text/json;charset=utf-8," + escape(JSON.stringify(saveData)));		   
+		var MIME_TYPE = 'application/json';
+	  var bb = new Blob([JSON.stringify(saveData)], {type: MIME_TYPE});
+
+  	var a = document.createElement('a');
+  	a.download = $scope.fileName + ".json";
+  	a.href = window.URL.createObjectURL(bb);
+  	a.textContent = '點擊下載';  	
+
+  	a.dataset.downloadurl = [MIME_TYPE, a.download, a.href].join(':');
+  	document.querySelectorAll("#downloadLinkWrap")[0].innerHTML = "";
+    document.querySelectorAll("#downloadLinkWrap")[0].appendChild(a);  
+	}
 
 }]);
 
@@ -19,11 +71,11 @@ module.directive('mindMap', function () {
 			var eleW = element[0].clientWidth,
 					eleH = element[0].clientHeight;			
 
-		  var m = [20, 120, 20, 120],
+		  var m = [20,40,20,80],
 				  w = eleW - m[1] - m[3],
 				  h = eleH - m[0] - m[2],
 				  i = 0,
-				  root;
+				  root;			
 
 			var tree = d3.layout.tree().size([h, w]);
 			var diagonal = d3.svg.diagonal().projection(function(d) { return [d.y, d.x]; });
@@ -55,12 +107,15 @@ module.directive('mindMap', function () {
 
 			scope.$watch('json' , function(){
 				if(!(scope.json != null)){
-			  	return;
+			  	scope.json = {
+			  		"name" : "root"
+			  	}
 			  }
 			  root = scope.json;
 			  root.x0 = h/2;
 	  		root.y0 = 0;
 				update(root);
+				scope.root = root;
 			});
 
 
@@ -238,9 +293,7 @@ module.directive('mindMap', function () {
 			      .on("click" , editNode);
 
 
-	    	function addNewNode (d){	    		
-	    		console.log("add");
-	    		console.log(d);
+	    	function addNewNode (d){	    			    		
 	    		var childList;
 	    		if(d.children){
 	    			childList = d.children;
@@ -259,18 +312,22 @@ module.directive('mindMap', function () {
 	    			"parent": d
 	    		});	    		
 	    		update(d);
-	    		//TODO : change original json
+	    		scope.root = root;	    		
 	    	}
 	    	function removeNode (d){	    		
 	    		var thisId = d.id;
+	    		if(!d.parent){
+	    			alert("沒辦法刪除Root");
+	    			return;
+	    		}
 	    		d.parent.children.forEach(function(c , index){	    			
 	    			if(thisId === c.id){
-	    				d.parent.children.splice(index , index+1);
+	    				d.parent.children.splice(index , 1);
+	    				return;
 	    			}
-	    		});
-	    		console.log(d.parent.children);
+	    		});	    		
 	    		update(d.parent);
-	    		//TODO : change original json	
+	    		scope.root = root;	    		
 	    	}
 
 	    	function editNode (d){	    		
@@ -278,11 +335,28 @@ module.directive('mindMap', function () {
 					if (name != null){
 					  d.name = name;
 					}
-					console.log(d);
+					if(!d.parent){
+						update(d);
+					}
 					update(d.parent);
-	    		//TODO : change original json
+					scope.root = root;	    		
 	    	}
 			}
 		}
 	}
+});
+
+module.directive('changeFile', function(){
+    return {
+        scope: {
+            changeFunction: '=changeFile'            
+        },
+        link: function(scope, el, attrs){
+            el.bind('change', function(event){
+                var files = event.target.files;
+                var file = files[0];                
+                scope.changeFunction(file);
+            });
+        }
+    };
 });

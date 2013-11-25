@@ -16,7 +16,20 @@
             {"name": "MergeEdge"}
           ]
         },
-        {"name": "CommunityStructure"},
+        {
+          "name": "CommunityStructure",
+          "children": [
+            {
+              "name": "AgglomerativeCluster",
+              "children": [
+                {"name": "AgglomerativeCluster"},
+                {"name": "CommunityStructure"},
+                {"name": "HierarchicalCluster"},
+                {"name": "MergeEdge"}
+              ]
+            }
+          ]
+        },
         {"name": "HierarchicalCluster"},
         {"name": "MergeEdge"}
       ]
