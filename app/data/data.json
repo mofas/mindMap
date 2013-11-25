@@ -7,10 +7,18 @@
     {
       "name": "cluster",
       "children": [
-        {"name": "AgglomerativeCluster", "size": 3938},
-        {"name": "CommunityStructure", "size": 3812},
-        {"name": "HierarchicalCluster", "size": 6714},
-        {"name": "MergeEdge", "size": 743}
+        {
+          "name": "AgglomerativeCluster",
+          "children": [
+            {"name": "AgglomerativeCluster"},
+            {"name": "CommunityStructure"},
+            {"name": "HierarchicalCluster"},
+            {"name": "MergeEdge"}
+          ]
+        },
+        {"name": "CommunityStructure"},
+        {"name": "HierarchicalCluster"},
+        {"name": "MergeEdge"}
       ]
     }
     ]

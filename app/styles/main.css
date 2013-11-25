@@ -1,4 +1,7 @@
-
+html,
+body{
+  min-height: 100%;
+}
 rect {
   fill: none;
   pointer-events: all;
@@ -17,10 +20,48 @@ line {
   stroke-width: 1.5px;
 }
 .node {
+  position: relative;
+  display: inline-block;
   font: 10px sans-serif;
 }
 .link {
   fill: none;
   stroke: #ccc;
   stroke-width: 1.5px;
+}
+
+.minMapWrap,
+.mindMap{
+  width: 100%;
+  height: 700px;
+}
+
+.mindMap{
+  background: #fee;
+}
+
+
+.function-btn{    
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;  
+  transition: all 0.5s ease;
+}
+
+.function-btn.add{  
+  fill: #57D37E;  
+}
+.function-btn.remove{  
+  fill: #E97979;  
+}
+.function-btn.edit{  
+  fill: #79AFE9;  
+}
+
+g:hover > .function-btn{
+  opacity: 1;
+}
+
+.function-bg{
+  cursor: pointer;  
 }

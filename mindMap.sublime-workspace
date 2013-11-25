@@ -519,6 +519,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 1113,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/controllers/main.js",
+			"settings":
+			{
+				"buffer_size": 4548,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 419,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -764,6 +788,15 @@
 	},
 	"file_history":
 	[
+		"/D/node/kidsCard/app/scripts/directives/directive.js",
+		"/D/node/mindMap/app/styles/main.css",
+		"/D/node/mindMap/.gitignore",
+		"/D/node/mindMap/app/scripts/app.js",
+		"/D/node/mindMap/app/data/data.json",
+		"/D/node/mindMap/package.json",
+		"/D/node/mindMap/Gruntfile.js",
+		"/D/node/mindMap/app/styles/bootstrap.css",
+		"/D/node/mindMap/app/.buildignore",
 		"/D/node/mindMap/bower.json",
 		"/D/node/kidsRoom/app/scripts/controllers/main.js",
 		"/D/node/kidsRoom/app/scripts/services/service.js",
@@ -783,7 +816,6 @@
 		"/D/node/kidsCard/app/scripts/directives/ui.js",
 		"/D/node/kidsRoom/app/scripts/app.js",
 		"/D/node/kidsRoom/app/views/livingRoom.html",
-		"/D/node/kidsCard/app/scripts/directives/directive.js",
 		"/D/node/kidsRoom/app/views/courtyard.html",
 		"/D/node/kidsCard/app/styles/main.css",
 		"/D/node/kidsRoom/app/views/bedroom.html",
@@ -883,15 +915,7 @@
 		"/D/node/appReward/app/styles/bootstrap.css",
 		"/D/node/kidsCard/app/scripts/factories/filter.js",
 		"/D/node/kidsCard/app/scripts/factories/utility.js",
-		"/D/node/kidsCard/app/scripts/view.js",
-		"/D/node/angular.js/src/minErr.js",
-		"/D/node/angular.js/src/loader.suffix",
-		"/D/node/angular.js/src/loader.prefix",
-		"/D/node/kidsCard/app/data/giftBox.json",
-		"/D/node/kidsCard/app/views/cardFactory.html",
-		"/D/node/kidsCard/app/views/giftBox.html",
-		"/D/node/kidsCard/app/views/menu.html",
-		"/D/node/kidsCard/app/views/header.html"
+		"/D/node/kidsCard/app/scripts/view.js"
 	],
 	"find":
 	{
@@ -909,6 +933,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"root",
+			"toggle",
+			"coffee",
 			"//TODO : ajax",
 			" = ",
 			"am",
@@ -1033,10 +1060,7 @@
 			"isGetCandleHolder",
 			": ;",
 			"<div class=\"item\"",
-			"</div>",
-			"false",
-			"lass=\"",
-			","
+			"</div>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1054,8 +1078,91 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/index.html",
+					"settings":
+					{
+						"buffer_size": 1113,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								641,
+								651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/scripts/controllers/main.js",
+					"settings":
+					{
+						"buffer_size": 4548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1671,
+								1671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1254.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/styles/main.css",
+					"settings":
+					{
+						"buffer_size": 419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
