@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"child",
+				"children"
+			],
+			[
+				"chi",
+				"children"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ge",
+				"generationGap"
+			],
+			[
 				"liv",
 				"livingRoom"
 			],
@@ -498,22 +514,6 @@
 			[
 				"test",
 				"testSigma"
-			],
-			[
-				"fade",
-				"fadeIn"
-			],
-			[
-				"scroll",
-				"scrollEvent"
-			],
-			[
-				"cate",
-				"categoryId"
-			],
-			[
-				"ty",
-				"typeId"
 			]
 		]
 	},
@@ -523,7 +523,15 @@
 			"file": "app/index.html",
 			"settings":
 			{
-				"buffer_size": 1113,
+				"buffer_size": 1625,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/index.html",
+			"settings":
+			{
+				"buffer_size": 1299,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +539,7 @@
 			"file": "app/scripts/controllers/main.js",
 			"settings":
 			{
-				"buffer_size": 4548,
+				"buffer_size": 11280,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,8 +547,16 @@
 			"file": "app/styles/main.css",
 			"settings":
 			{
-				"buffer_size": 419,
+				"buffer_size": 1405,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 7554,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -788,12 +804,23 @@
 	},
 	"file_history":
 	[
+		"/D/node/mindMap/dist/styles/35c5805d.main.css",
+		"/D/node/mindMap/app.js",
+		"/D/node/mindMap/dist/styles/d41d8cd9.main.css",
+		"/D/node/mindMap/package.json",
+		"/D/node/kidsRoom/package.json",
+		"/C/Documents and Settings/mofas_lee/桌面/mindMap.json",
+		"/C/Documents and Settings/mofas_lee/桌面/JSON_readwrite.js",
+		"/D/node/mindMap/app/data/data.json",
+		"/C/Documents and Settings/mofas_lee/桌面/mindMap/SVG/close.svg",
+		"/C/Documents and Settings/mofas_lee/桌面/mindMap/SVG/feather.svg",
+		"/C/Documents and Settings/mofas_lee/桌面/mindMap/selection.json",
+		"/C/Documents and Settings/mofas_lee/桌面/mindMap/SVG/add.svg",
+		"/C/Documents and Settings/mofas_lee/桌面/mindMap/style.css",
 		"/D/node/kidsCard/app/scripts/directives/directive.js",
 		"/D/node/mindMap/app/styles/main.css",
 		"/D/node/mindMap/.gitignore",
 		"/D/node/mindMap/app/scripts/app.js",
-		"/D/node/mindMap/app/data/data.json",
-		"/D/node/mindMap/package.json",
 		"/D/node/mindMap/Gruntfile.js",
 		"/D/node/mindMap/app/styles/bootstrap.css",
 		"/D/node/mindMap/app/.buildignore",
@@ -820,7 +847,6 @@
 		"/D/node/kidsCard/app/styles/main.css",
 		"/D/node/kidsRoom/app/views/bedroom.html",
 		"/D/node/kidsCard/app/scripts/controllers/main.js",
-		"/D/node/kidsRoom/package.json",
 		"/D/node/kidsRoom/dist/views/bedroom.html",
 		"/D/node/kidsRoom/Gruntfile.js",
 		"/D/node/kidsRoom/dist/scripts/b1caa46a.scripts.js",
@@ -905,17 +931,7 @@
 		"/D/node/angular.js/src/auto/injector.js",
 		"/D/node/angular.js/node_modules/karma/node_modules/useragent/test/parser.test.js",
 		"/D/node/appReward/app/styles/team.css",
-		"/D/node/appReward/app/styles/register.css",
-		"/C/Documents and Settings/mofas_lee/桌面/bootstrap-3.0.0/dist/css/bootstrap.css",
-		"/D/node/angular.js/src/ng/document.js",
-		"/D/node/angular.js/src/ng/exceptionHandler.js",
-		"/D/node/angular.js/src/loader.js",
-		"/D/node/angular.js/src/ng/anchorScroll.js",
-		"/D/node/angular.js/src/ng/window.js",
-		"/D/node/appReward/app/styles/bootstrap.css",
-		"/D/node/kidsCard/app/scripts/factories/filter.js",
-		"/D/node/kidsCard/app/scripts/factories/utility.js",
-		"/D/node/kidsCard/app/scripts/view.js"
+		"/D/node/appReward/app/styles/register.css"
 	],
 	"find":
 	{
@@ -933,6 +949,24 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"copy",
+			"app",
+			"cssmin",
+			"cdnify",
+			"uploadThumb",
+			"console",
+			"//TODO : change original json",
+			"console",
+			"forEach",
+			"function(){\n			      	return true;\n			      }",
+			"path",
+			": ;",
+			"togglePoint",
+			"json",
+			"x0",
+			"source",
+			", \"size\": ",
+			"generationGap",
 			"root",
 			"toggle",
 			"coffee",
@@ -1042,25 +1076,7 @@
 			"<div ng-click=",
 			"<div>",
 			"question",
-			"choice",
-			" ",
-			".《",
-			" ",
-			"50px",
-			"bedroom_item",
-			"livingRoom_item",
-			"livingRoom",
-			"opacity",
-			"getAnimation",
-			"$scope.isUnlock",
-			"isUnlock",
-			"isGetMatches",
-			"isOpenDrawer",
-			"Drawer",
-			"isGetCandleHolder",
-			": ;",
-			"<div class=\"item\"",
-			"</div>"
+			"choice"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1086,15 +1102,15 @@
 					"file": "app/index.html",
 					"settings":
 					{
-						"buffer_size": 1113,
+						"buffer_size": 1625,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								641,
-								651
+								1480,
+								1480
 							]
 						],
 						"settings":
@@ -1111,44 +1127,73 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/scripts/controllers/main.js",
+					"file": "dist/index.html",
 					"settings":
 					{
-						"buffer_size": 4548,
+						"buffer_size": 1299,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1671,
-								1671
+								430,
+								430
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1254.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/styles/main.css",
+					"file": "app/scripts/controllers/main.js",
 					"settings":
 					{
-						"buffer_size": 419,
+						"buffer_size": 11280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								379,
-								379
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/main.css",
+					"settings":
+					{
+						"buffer_size": 1405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								519,
+								519
 							]
 						],
 						"settings":
@@ -1159,6 +1204,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Gruntfile.js",
+					"settings":
+					{
+						"buffer_size": 7554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5689,
+								5689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4422.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

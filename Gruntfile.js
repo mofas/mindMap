@@ -95,7 +95,7 @@ module.exports = function (grunt) {
         }]
       },
       server: '.tmp'
-    },
+    },        
     // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
@@ -106,9 +106,7 @@ module.exports = function (grunt) {
         files: {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
-            '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= yeoman.dist %>/styles/fonts/*'
+            '<%= yeoman.dist %>/styles/{,*/}*.css',            
           ]
         }
       }
@@ -126,38 +124,31 @@ module.exports = function (grunt) {
         dirs: ['<%= yeoman.dist %>']
       }
     },
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
     cssmin: {
-      // By default, your `index.html` <!-- Usemin Block --> will take care of
-      // minification. This option is pre-configured if you do not wish to use
-      // Usemin blocks.
-      // dist: {
-      //   files: {
-      //     '<%= yeoman.dist %>/styles/main.css': [
-      //       '.tmp/styles/{,*/}*.css',
-      //       '<%= yeoman.app %>/styles/{,*/}*.css'
-      //     ]
-      //   }
-      // }
+      
+    },
+    uncss: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': ['<%= yeoman.app %>/index.html']
+          }
+        },
+        options: {
+          //css setting for SVG
+          ignore: [
+            'rect',
+            'line',
+            '.node',
+            '.node circle',
+            '.link',
+            '.function-btn',
+            '.function-btn.add',
+            '.function-btn.remove',
+            '.function-btn.edit',
+            'g:hover > .function-btn',
+            '.function-bg'
+          ]
+        }
     },
     htmlmin: {
       dist: {
@@ -191,7 +182,8 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',            
             // 'bower_components/**/*',            
-            'styles/fonts/*'
+            'styles/fonts/*',
+            'data/*',
           ]
         }, {
           expand: true,
@@ -203,16 +195,10 @@ module.exports = function (grunt) {
         }]
       }
     },
-    concurrent: {
-      server: [        
-      ],
-      test: [        
-      ],
+    concurrent: {      
       dist: [        
-        'imagemin',
-        'svgmin',
         'htmlmin'
-      ]
+      ]          
     },
     karma: {
       unit: {
@@ -252,8 +238,7 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
-      'clean:server',
-      'concurrent:server',
+      'clean:server',      
       'connect:livereload',
       'open',
       'watch'
@@ -261,8 +246,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', [
-    'clean:server',
-    'concurrent:test',
+    'clean:server',    
     'connect:test',
     'karma'
   ]);
@@ -275,6 +259,7 @@ module.exports = function (grunt) {
     'copy',
     'cdnify',
     'ngmin',
+    'uncss',
     'cssmin',
     'uglify',
     'rev',
